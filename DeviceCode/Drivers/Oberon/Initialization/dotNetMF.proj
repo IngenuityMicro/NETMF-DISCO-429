@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\Drivers\Oberon\Initialization\dotnetmf.proj</ProjectPath>
+    <ProjectGuid>{008300F8-00EB-0007-BB35-1AA5DD250D39}</ProjectGuid>
+    <AssemblyName>initialization_hal</AssemblyName>
+    <Size>
+    </Size>
+    <Description>System initialization library</Description>
+    <Level>HAL</Level>
+    <LibraryFile>initialization_hal.$(LIB_EXT)</LibraryFile>
+    <ManifestFile>initialization_hal.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>BlockStorage</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter>
+    </CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Initialization_HAL" Guid="{34EDFFBE-0FB6-49CC-A673-03BD96EDE0A9}" ProjectPath="$(SPOCLIENT)\Framework\Features\SD_HAL.libcatproj" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-06-22</Date>
+          <Author>Microsoft</Author>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Directory>DeviceCode\Drivers\Oberon\Initialization</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+      <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="OEM_Model_SKU_NetworkID.cpp" />
+    <Compile Include="$(SPOCLIENT)\DeviceCode\Initialization\tinyhal.cpp" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

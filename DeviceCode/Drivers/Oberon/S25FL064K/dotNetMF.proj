@@ -1,0 +1,51 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\Drivers\Oberon\S25FL064K_Flash\dotNetMF.proj</ProjectPath>
+    <ProjectGuid>{00B30021-0067-0005-8504-869EB7C705D9}</ProjectGuid>
+    <AssemblyName>S25FL064K_Flash</AssemblyName>
+    <Size>
+    </Size>
+    <Description>S25FL064K flash block storage driver</Description>
+    <Level>HAL</Level>
+    <LibraryFile>S25FL064K_Flash.$(LIB_EXT)</LibraryFile>
+    <ManifestFile>S25FL064K_Flash.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>BlockStorage</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter>
+    </CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BlockStorage_HAL" Guid="{B87F1565-3D64-4531-A84B-2F9C2B221D1E}" ProjectPath="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Directory>DeviceCode\Drivers\Oberon\S25FL064K_Flash</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <Import Project="$(SPOCLIENT)\Framework\features\BlockStorageConfig_HAL.libcatproj" />
+
+  <PropertyGroup />
+
+  <ItemGroup>
+    <HFiles Include="S25FL064K_Flash.h" />
+    <Compile Include="S25FL064K_Flash_driver.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

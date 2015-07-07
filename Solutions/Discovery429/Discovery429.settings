@@ -1,0 +1,26 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>Oberon microsystems, Inc.</Author>
+    <Description>Discovery429 board solution</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{00AC00D3-004E-00C2-908F-FD686D39F6BB}</PlatformGuid>
+    <INSTRUCTION_SET>THUMB2</INSTRUCTION_SET>
+    <TARGETPLATFORM>Discovery429</TARGETPLATFORM>
+    <PLATFORM>Discovery429</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+    <NO_BOOTLOADER_COMPRESSION>true</NO_BOOTLOADER_COMPRESSION>
+  </PropertyGroup>
+  <ItemGroup>
+    <TinyCLR_Defines Include="PLATFORM_NO_CLR_TRACE=1" />
+    <TinyCLR_Defines Include="TINYCLR_NO_IL_INLINE=1" />
+  </ItemGroup>   
+  <ItemGroup>
+    <IncludePaths Include="Solutions\Discovery429" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\STM32F4\STM32F4.settings" />
+  <PropertyGroup>
+    <OEMSystemInfoString>Oberon microsystems, Inc.</OEMSystemInfoString>
+  </PropertyGroup>
+</Project>

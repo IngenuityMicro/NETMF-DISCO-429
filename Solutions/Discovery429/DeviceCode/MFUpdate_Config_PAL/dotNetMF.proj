@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <AssemblyName>MFUpdate_Config_PAL_Discovery429</AssemblyName>
+    <ProjectGuid>{00CE00AA-0015-0054-BB30-50E798C4E979}</ProjectGuid>
+    <Description>MFUpdate config Discovery429 component</Description>
+    <Level>HAL</Level>
+    <LibraryFile>MFUpdate_Config_PAL_Discovery429.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\Discovery429\DeviceCode\MFUpdate_Config_PAL\dotNetMF.proj</ProjectPath>
+    <Directory>Solutions\Discovery429\DeviceCode\MFUpdate_Config_PAL</Directory>
+    <ManifestFile>MFUpdate_Config_PAL_Discovery429.$(LIB_EXT).manifest</ManifestFile>
+    <Groups />
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="MFUpdate_Config_PAL" Guid="{9283C9C3-E1CF-4029-B53E-5E5801C6ADDC}" ProjectPath="$(SPOCLIENT)\Framework\Features\MFUpdate_Config_PAL.libcatproj" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2011-09-15</Date>
+          <Author />
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation />
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter />
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>false</IsStub>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <HasLibraryCategory>True</HasLibraryCategory>
+    <AssemblyName>MFUpdate_Config_PAL_Discovery429</AssemblyName>
+    <ProjectGuid>{394B2C1A-EE11-4180-8E69-9975B9F05D36}</ProjectGuid>
+    <Description>MFUpdate config MFUpdate_Config_PAL_Discovery429 component</Description>
+    <Level>HAL</Level>
+    <LibraryFile>MFUpdate_Config_PAL_Discovery429.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\Discovery429\DeviceCode\MFUpdate_Config_PAL\dotNetMF.proj</ProjectPath>
+    <Directory>Solutions\Discovery429\DeviceCode\MFUpdate_Config_PAL</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="MFUpdate_config_Discovery429.cpp" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\include\mfupdate_decl.h" />
+
+    <HFiles Include="$(SPOCLIENT)\devicecode\drivers\mfupdate\microbooterupdate.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\drivers\mfupdate\storage\blockstorageupdate.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\drivers\mfupdate\validation\crc\crcupdatevalidation.h" />
+    
+    <IncludePaths Include="DeviceCode\PAL" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

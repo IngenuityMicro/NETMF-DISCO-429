@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FeatureName>System.Security.Cryptography.Netmf</FeatureName>
+    <Guid>{da89068f-304b-4fdd-9b62-9d8e0a7622fe}</Guid>
+    <Description>&lt;Add Feature Description Here&gt;</Description>
+    <Groups />
+    <SYSTEM_SECURITY_CRYPTOGRAPHY_NETMF_FEATUREPROJ>True</SYSTEM_SECURITY_CRYPTOGRAPHY_NETMF_FEATUREPROJ>
+  </PropertyGroup>
+  <ItemGroup>
+    <DriverLibs Include="System_Security_Cryptography_Netmf.$(LIB_EXT)" />
+    <DriverLibs Include="STM32F4_Random.$(LIB_EXT)" />
+    <InteropFeature Include="System_Security_Cryptography_Netmf" />
+    <RequiredProjects Include="$(SPOCLIENT)\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Random\dotNetmf.proj" />
+    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Crypto\System_Security_Cryptography\Managed\System.Security.Cryptography.Netmf.pe" />
+    <RequiredProjects Include="$(SPOCLIENT)\Crypto\System_Security_Cryptography\Interop\dotNetmf.proj" />
+  </ItemGroup>
+</Project>
